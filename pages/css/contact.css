@@ -1,0 +1,70 @@
+
+
+/* 
+    --contact--
+*/
+
+@import url("../../util/util.css");
+
+@import url("../../components/css/header.css");
+
+@import url("../../components/css/footer.css");
+
+@import url("../../components/css/button.css");
+
+
+section:first-child{
+    display:grid;
+    grid-column:1/-1;
+    grid-template-columns:subgrid;
+    row-gap:20px;
+    padding-block:40px;
+
+    span{
+        font-size:2rem;
+        font-weight:bold;
+        grid-column:3/15;
+        border-bottom:1px solid var(--rose-taupe);
+        color:var(--rose-taupe);
+    }
+
+    form{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        grid-column:5/13;
+    }
+
+    form label{
+        font-size:1.1rem;
+        color:var(--rose-taupe);
+        font-weight:bold;
+    }
+
+    form input, form textarea{
+        border-width:0;
+    }
+
+    form input:not([type="submit"]), form textarea{
+        padding:10px;
+        border-radius:5px;
+        background-color:var(--tea-green);
+    }
+
+    form textarea{
+        height:200px;
+    }
+
+    form input[type="submit"]{
+        cursor:pointer;
+    }
+
+    &[small], &[medium]{
+
+        form{
+            grid-column:3/15;
+        }
+    }
+
+}
+

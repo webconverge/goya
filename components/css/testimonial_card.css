@@ -1,0 +1,79 @@
+
+
+/* 
+    --testimonial card--
+*/
+
+.testimonial-card{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+    /* testimony text */
+    > p{
+        font-size:1.5rem;
+        font-weight:bold;
+        line-height:1.6;
+        text-align:center;
+    }
+
+    /* customer details */
+    > div{
+        display:grid;
+        grid-template-columns:60px auto;
+        grid-template-rows:30px 30px;
+        column-gap:20px;
+    }
+
+    /* customer name */
+    > div span:first-of-type{
+        grid-column:2/3;
+        grid-row:1/2;
+        font-weight:bold;
+        font-size:1.1rem;
+        color:var(--rose-taupe);
+    }
+
+    /* customer title */
+    > div span:last-of-type{
+        grid-column:2/3;
+        grid-row:2/3;
+        color:var(--tea-green);
+    }
+
+    /* image wrapper */
+    > div figure{
+        position:relative;
+        grid-row:1/-1;
+        border-radius:60px;
+        overflow:hidden;
+    }
+
+    /* img */
+    > div figure img{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    &[small], &[medium]{
+        align-items:center;
+
+        /* customer detail */
+        > div{
+            display:contents;
+        }
+
+        /* image wrapper */
+        > div figure{
+            height:60px;
+            width:60px;
+        }
+    }
+
+}
+
+

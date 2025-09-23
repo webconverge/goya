@@ -1,0 +1,47 @@
+
+
+/* 
+    --blog post card--
+*/
+
+.blog-post-card{
+    display:grid;
+    grid-template-rows:60% 10% auto;
+    gap:20px;
+
+    /* image wrapper */
+    figure{
+        position:relative;
+        overflow:hidden;
+        border-radius:10px;
+    }
+
+    /* image */
+    figure img{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    /* blog title */
+    span{
+        font-size:1.2rem;
+        font-weight:bold;
+        color:var(--rose-taupe);
+        place-self:center;
+    }
+
+    /* blog preview */
+    p{
+        line-height:1.6;
+        opacity:0.5;
+        place-self:center;
+        text-align:center;
+    }
+
+}
+
+
